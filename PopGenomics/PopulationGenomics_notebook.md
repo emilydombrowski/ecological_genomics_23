@@ -6,7 +6,7 @@
 
 
 ### Start Date: 9-11-23
-### End Date: 
+### End Date: in progress
 ### Project Descriptions: This notebook documents my workflow for bioinformatics in the Population Genomics section of my Ecological Genomics course.
 
 
@@ -17,6 +17,7 @@
 * [Entry 1: 2023-09-11](#id-section1)
 * [Entry 2: 2023-09-13](#id-section2)
 * [Entry 3: 2023-09-18](#id-section3)
+* [Entry 4: 2023-09-20](#id-section4)
 
 
 ------    
@@ -50,4 +51,19 @@
 <div id='id-section3'/>   
 
 
-### Entry 3: 2023-XX-XX.
+### Entry 3: 2023-09-18.
+
+- class website tutorial: https://pespenilab.github.io/Ecological-Genomics/Fall2023/tutorials/2023-09-18_PopGenomics_Day3.html
+- set up lab notebooks
+- visualize sequence allignment files (.sam)
+- process the mapping file .sam to bianry (*.bam)
+- changed 'rm' function in bash: now, when deleting a file, a prompt will ask for clarification
+- used vim to edit loop script for processing mapping files (.sam, then converting .sam to .bam)
+- used tmux to create a screen for processing bash process_bams.sh command
+
+
+------    
+<div id='id-section4'/>   
+
+
+### Entry 4: 2023-09-20.
