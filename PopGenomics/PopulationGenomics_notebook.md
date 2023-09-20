@@ -67,3 +67,18 @@
 
 
 ### Entry 4: 2023-09-20.
+
+- Class website tutorial:
+https://pespenilab.github.io/Ecological-Genomics/Fall2023/tutorials/2023-09-20_PopGenomics_Day4.html
+- finishing bam_stats.sh loop + investigating output
+- read 2 usually has lower p-scores that are trimmed down due to Q scores
+- outputs coverage depths of organisms; higher coverage is important in determining hetero- vs. homozygosity, allelic frequencies, etc.
+- system assigns genotype frequency to estimate average chance of allelic position 
+- ANGSD: useful for low reads to estimate genotype likelyhood
+- User guide: (work in progress)
+http://www.popgen.dk/angsd/index.php/ANGSD
+- Created angsd.sh file in VIM
+- filepath: /netfiles/ecogen/PopulationGenomics/fastq/red_spruce/cleanreads/bam
+- File is stored in =~myresults/ANGSD
+- If there is a ~, putting quotes around the file name won't allow recognition
+- started running ANGSD on tmux before leaving class
