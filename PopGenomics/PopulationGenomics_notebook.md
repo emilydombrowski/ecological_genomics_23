@@ -18,6 +18,7 @@
 * [Entry 2: 2023-09-13](#id-section2)
 * [Entry 3: 2023-09-18](#id-section3)
 * [Entry 4: 2023-09-20](#id-section4)
+* [Entry 5: 2023-09-25](#id-section5)
 
 
 ------    
@@ -82,3 +83,14 @@ http://www.popgen.dk/angsd/index.php/ANGSD
 - File is stored in =~myresults/ANGSD
 - If there is a ~, putting quotes around the file name won't allow recognition
 - started running ANGSD on tmux before leaving class
+
+------    
+<div id='id-section5'/>   
+
+
+### Entry 5: 2023-09-25.
+
+-Followed tutorial on https://pespenilab.github.io/Ecological-Genomics/Fall2023/tutorials/2023-09-25_PopGenomics_Day5.html
+-Ran bash scripts for estimating Site Frequency Spectrum (SFS)
+- Used vim to make a loop that estimated theta stats
+- work in R script: titled "2032.thetas.R", saved to "~/Documents/UVM/ecological_genomics_23/PopGenomics/scripts/"
