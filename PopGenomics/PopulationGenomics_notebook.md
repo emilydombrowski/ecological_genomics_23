@@ -19,6 +19,7 @@
 * [Entry 3: 2023-09-18](#id-section3)
 * [Entry 4: 2023-09-20](#id-section4)
 * [Entry 5: 2023-09-25](#id-section5)
+* [Entry 5: 2023-09-27](#id-section6)
 
 
 ------    
@@ -94,3 +95,27 @@ http://www.popgen.dk/angsd/index.php/ANGSD
 -Ran bash scripts for estimating Site Frequency Spectrum (SFS)
 - Used vim to make a loop that estimated theta stats
 - work in R script: titled "2032.thetas.R", saved to "~/Documents/UVM/ecological_genomics_23/PopGenomics/scripts/"
+
+------    
+<div id='id-section6'/>   
+
+
+### Entry 6: 2023-09-27.
+-class script: https://pespenilab.github.io/Ecological-Genomics/Fall2023/tutorials/2023-09-27_PopGenomics_Day6.html
+-Created vim script to calculate Fst using ANGSD between "MYPOP" and black spruce...file named ANGSD_Fst.sh
+-Using PCAngsd in bash (step 3 on tutorial)
+  -created vim file named pcANGSD_allRS_poly.sh to ANGSD folder
+  -looking at all redspruce (allrs) polymorphic types (poly)
+  
+-Notes from class:
+-Saved to ~/myresults/ANGSD
+- Fst = (var(p)/mean(p)*mean(q))
+  -humans: Fst=0.05
+  -urchins: Fst<0.01
+  -large vertebrates: 0.1
+  -between sister taxa: 0.1-0.2
+-Tajima's d: 0-value represents population at equilibrium...hasn't been growing or shrinking...
+  -if this distribution shifts from 0 to positive, it signifies a loss of rare alleles (shrinking population)
+  -shifts from 0 to negative, it signifies an abundance of rare alleles (high mutation rate; population increase or expansion)
+  -in this study, southern populations are shrinking while northern population is growing (expected)
+-Calculate Fst: Ne=Theta/(4mu)
