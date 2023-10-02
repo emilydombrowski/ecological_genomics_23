@@ -106,6 +106,7 @@ http://www.popgen.dk/angsd/index.php/ANGSD
 -Using PCAngsd in bash (step 3 on tutorial)
   -created vim file named pcANGSD_allRS_poly.sh to ANGSD folder
   -looking at all redspruce (allrs) polymorphic types (poly)
+-transferred files with filezilla
   
 -Notes from class:
 -Saved to ~/myresults/ANGSD
