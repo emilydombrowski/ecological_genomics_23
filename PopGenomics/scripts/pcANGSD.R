@@ -62,9 +62,6 @@ ggscatter(data, x = "V1", y = "V2",
   scale_color_manual(values=c(cols), name="Source population") +
   guides(colour = guide_legend(nrow = 2))
 
-
-
-
 ## Next, we can look at the admixture clustering:
 
 # import the ancestry scores (these are the .Q files)
@@ -84,3 +81,6 @@ barplot(t(q)[,ord],
         main=paste0("Red spruce K=",K))
 text(tapply(1:nrow(pops),pops[ord,2],mean),-0.05,unique(pops[ord,2]),xpd=T)
 abline(v=cumsum(sapply(unique(pops[ord,2]),function(x){sum(pops[ord,2]==x)})),col=1,lwd=1.2)
+
+# 2022 population is suprising?
+# admixture plot: potential crossing with black spruce populations

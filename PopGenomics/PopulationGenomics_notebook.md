@@ -19,7 +19,8 @@
 * [Entry 3: 2023-09-18](#id-section3)
 * [Entry 4: 2023-09-20](#id-section4)
 * [Entry 5: 2023-09-25](#id-section5)
-* [Entry 5: 2023-09-27](#id-section6)
+* [Entry 6: 2023-09-27](#id-section6)
+* [Entry 7: 2023-10-02](#id-section7)
 
 
 ------    
@@ -119,4 +120,20 @@ http://www.popgen.dk/angsd/index.php/ANGSD
   -if this distribution shifts from 0 to positive, it signifies a loss of rare alleles (shrinking population)
   -shifts from 0 to negative, it signifies an abundance of rare alleles (high mutation rate; population increase or expansion)
   -in this study, southern populations are shrinking while northern population is growing (expected)
--Calculate Fst: Ne=Theta/(4mu)
+-Calculate Ne: Ne=Theta/(4*2.5E-10)
+
+------
+<div id='id-section7'/>   
+
+
+### Entry 7: 2023-10-02.
+
+-class tutorial: https://pespenilab.github.io/Ecological-Genomics/Fall2023/tutorials/2023-10-02_PopGenomics_Day7.1.html
+-updated Fst values in google sheet 
+-discussed PCA and Admixture plots
+  -complimentary to one another! PCA1 may be related to admixture, hybridization, etc.
+-created ANGSD file for processing population divergence
+-saved new r script titled "outlier_contigs_scripts.R"
+  -file path: ~/Documents/UVM/ecological_genomics_23/PopGenomics/scripts/outlier_contigs_scripts.R
+-processed outliers dataset in bash (see tutorial), took them over to https://plantgenie.org/Enrichment (no gene ontology observed, but p-fam genes were observed)
+  -talks about statistics, description of proteins, q-values, etc.
