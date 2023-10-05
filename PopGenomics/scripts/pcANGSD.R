@@ -66,9 +66,13 @@ ggscatter(data, x = "V1", y = "V2",
 
 # import the ancestry scores (these are the .Q files)
 
-q <- read.table("allRS_poly.admix.2.Q", sep=" ", header=F)
+q <- read.table("allRS_poly.admix.3.Q", sep=" ", header=F)
+
+dim(q)
 
 K=dim(q)[2] #Find the level of K modeled
+
+dim(q)[2]
 
 ## order according to population code
 ord<-order(pops[,2])
