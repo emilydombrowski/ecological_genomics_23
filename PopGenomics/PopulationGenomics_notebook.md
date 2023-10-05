@@ -21,6 +21,7 @@
 * [Entry 5: 2023-09-25](#id-section5)
 * [Entry 6: 2023-09-27](#id-section6)
 * [Entry 7: 2023-10-02](#id-section7)
+* [Entry 8: 2023-10-04](#id-section8)
 
 
 ------    
@@ -137,3 +138,15 @@ http://www.popgen.dk/angsd/index.php/ANGSD
   -file path: ~/Documents/UVM/ecological_genomics_23/PopGenomics/scripts/outlier_contigs_scripts.R
 -processed outliers dataset in bash (see tutorial), took them over to https://plantgenie.org/Enrichment (no gene ontology observed, but p-fam genes were observed)
   -talks about statistics, description of proteins, q-values, etc.
+  
+
+------    
+<div id='id-section8'/>   
+
+
+### Entry 8: 2023-10-04.
+
+-class link: https://pespenilab.github.io/Ecological-Genomics/Fall2023/tutorials/2023-10-04_PopGenomics_Day8.html
+-Genotype-Environment Associations (GEA)
+-New script titled GEA.R created in scripts folders to output selection outliers
+-New script titled 
