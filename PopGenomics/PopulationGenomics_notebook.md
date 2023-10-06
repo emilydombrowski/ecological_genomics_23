@@ -149,4 +149,4 @@ http://www.popgen.dk/angsd/index.php/ANGSD
 -class link: https://pespenilab.github.io/Ecological-Genomics/Fall2023/tutorials/2023-10-04_PopGenomics_Day8.html
 -Genotype-Environment Associations (GEA)
 -New script titled GEA.R created in scripts folders to output selection outliers
--New script titled 
+-New script titled ANGSD_GEA

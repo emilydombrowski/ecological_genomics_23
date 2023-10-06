@@ -66,7 +66,7 @@ ggscatter(data, x = "V1", y = "V2",
 
 # import the ancestry scores (these are the .Q files)
 
-q <- read.table("allRS_poly.admix.3.Q", sep=" ", header=F)
+q <- read.table("allRS_poly.admix.4.Q", sep=" ", header=F)
 
 dim(q)
 
