@@ -44,7 +44,7 @@ data=as.data.frame(PCA$vectors)
 data=data[,c(1:3)]
 data= cbind(data, pops)
 
-cols=c("#377eB8","#EE9B00","#0A9396","#94D2BD","#FFCB69","#005f73","#E26D5C","#AE2012", "#6d597a", "#7EA16B","#d4e09b", "gray70")
+cols=c("#377eB8","#EE9B00","#0A9396","#94D2BD","#FFCB69","#005f73","#E26D5C","#AE2012", "#6d597a", "#7EA16B","#d4e09b", "gray70", "cyan")
 
 ggscatter(data, x = "V1", y = "V2",
           color = "Pop",
