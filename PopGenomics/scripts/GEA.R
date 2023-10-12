@@ -23,7 +23,7 @@ p_filtered = p[which(p$kept_sites==1),]
 dim(p_filtered)
 
 # get all the outliers with p-values below some cutoff
-cutoff=1e-3   
+cutoff=1e-3
 
 outliers_PC1 <- p_filtered[which(pval$p_PC1<cutoff),c("chromo","position")]
 outliers_PC2 <- p_filtered[which(pval$p_PC2<cutoff),c("chromo","position")]

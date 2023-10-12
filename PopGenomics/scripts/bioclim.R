@@ -13,7 +13,6 @@ setwd("~/Documents/UVM/ecological_genomics_23/PopGenomics/results/")
 bioclim_list <- list.files("~/Documents/UVM/ecological_genomics_23/PopGenomics/results/wc10/", pattern=".bil",full.names=T)
 
 bio <- raster::stack(bioclim_list)
-head(bio)
 
 # downloads bioclim variables at resolution of 10 arc minutes (coarsest res)
 
@@ -64,8 +63,8 @@ dimdesc(clim_PCA)[1:2]
 
 # Replace "XX" with your bio variable most significant on climate PC1:
 
-write.table(scale(angsd_coords_clim["bio12"]),
-            "allRS_bio12.txt",
+write.table(scale(angsd_coords_clim["bio13"]),
+            "allRS_bio13.txt",
             sep="\t",
             quote=F,
             row.names = F,
@@ -74,8 +73,8 @@ write.table(scale(angsd_coords_clim["bio12"]),
 
 # Replace "YY" with your bio variable most significant on climate PC2:  
 
-write.table(scale(angsd_coords_clim["bio10"]),
-            "allRS_bio10.txt",
+write.table(scale(angsd_coords_clim["bio2"]),
+            "allRS_bio2.txt",
             sep="\t",
             quote=F,
             row.names = F,

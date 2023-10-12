@@ -7,7 +7,7 @@ library(ggpubr) # plotting
 
 ## First, let's work on the genetic PCA:
 
-COV <- as.matrix(read.table("allRS_poly.cov")) # read in the genetic covariance matrix
+COV <- as.matrix(read.table("allRS_poly_e2.cov")) # read in the genetic covariance matrix
 
 PCA <- eigen(COV) # extract the principal components from the COV matrix
 
@@ -66,7 +66,7 @@ ggscatter(data, x = "V1", y = "V2",
 
 # import the ancestry scores (these are the .Q files)
 
-q <- read.table("allRS_poly.admix.4.Q", sep=" ", header=F)
+q <- read.table("allRS_poly.admix.2.Q", sep=" ", header=F)
 
 dim(q)
 
