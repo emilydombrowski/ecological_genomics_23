@@ -143,7 +143,7 @@ a1 <- ggplot(sft.data, aes(Power, SFT.R.sq, label = Power)) +
   geom_point() +
   geom_text(nudge_y = 0.1) +
   geom_hline(yintercept = 0.8, color = 'red') +
-  labs(x = 'Power', y = 'Scale free topology model fit, signed R^2') +
+  labs(x = 'Power', y = 'Scale free topology model fit, unsigned R^2') +
   theme_classic()
 
 

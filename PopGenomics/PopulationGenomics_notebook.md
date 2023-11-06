@@ -370,3 +370,45 @@ HW#2 Workflow
   b. softpower 8, signed (had to modify heatmap parameters to adjust axes)
   c. softpower 5, unsigned
     -unsigned: power picking matrix indicated softpower of 5
+    
+    ------    
+<div id='id-section18'/>   
+
+
+### Entry 18: 2023-11-06.
+
+Class link: https://pespenilab.github.io/Ecological-Genomics/Fall2023/tutorials/Csenge_structural_variation.html
+
+- Structural variation: 
+  - Different types...some that change the length of genome (imbalanced), some that don't change the number (balanced)
+  - Different processes give rise to different types of variation
+  - Cause many more mutations/diseases than SNPs
+  
+- Methods for detecting SVs
+  - Array based detection
+
+- Workflow
+  - Look for differences
+  - Make PCAs
+  - Find distances between PCA maps
+  - Make "mega PCA"
+    -Each dot represents a "window:" group of comared sequence from genomes
+  - combine windows to make another PCA to look at structure
+  
+- Study system
+  - 7 populations of purple urchins along the west coast
+  - Different genetic diversity, no overall population structure due to gene flow 
+
+- Mapping algorithm
+  - Loop through files to map
+- Called variants from mapped file
+  - 21 scaffolds with information from 114 individual
+  - Scaffolds: roughly size of chromosomal groups
+  
+- Bash workflow
+  - In folder /netfiles/ecogen/structural_variation/ there are files for working today
+  - I'll be working with chromosome # 7
+  - 7. NW_022145602.1
+  - copied chromosome to new directory str_data
+  - Edited filtering script in VIM, started running filtering in tmux
+  -Ran a local PCA in tmux
