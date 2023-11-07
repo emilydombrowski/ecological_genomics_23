@@ -29,6 +29,10 @@
 * [Entry 13: 2023-10-23](#id-section13)
 * [Entry 14: 2023-10-25](#id-section14)
 * [Entry 15: 2023-10-30](#id-section15)
+* [Entry 16: 2023-11-01](#id-section16)
+* [Entry 17: 2023-11-02](#id-section17)
+* [Entry 18: 2023-11-06](#id-section18)
+* [Entry 19: 2023-11-07](#id-section19)
 
 
 ------    
@@ -371,7 +375,7 @@ HW#2 Workflow
   c. softpower 5, unsigned
     -unsigned: power picking matrix indicated softpower of 5
     
-    ------    
+------    
 <div id='id-section18'/>   
 
 
@@ -412,3 +416,16 @@ Class link: https://pespenilab.github.io/Ecological-Genomics/Fall2023/tutorials/
   - copied chromosome to new directory str_data
   - Edited filtering script in VIM, started running filtering in tmux
   -Ran a local PCA in tmux
+  
+------    
+<div id='id-section18'/>   
+
+
+### Entry 19: 2023-11-07.
+
+HW#2 workflow
+
+- Evaluate number of clusters from WGCNA and number of genes assinged
+- Make into data frame (wgcna_md.csv in transcriptomics>results folder)
+- Make new script titled ahud_hw_barplot.R
+- Use ggplot to make grouped and stacked bar plots to visualize data

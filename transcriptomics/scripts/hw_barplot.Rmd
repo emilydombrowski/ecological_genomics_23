@@ -1,0 +1,25 @@
+---
+title: "hw_barplot"
+author: "Emily Dombrowski"
+date: "11/6/2023"
+output: html_document
+---
+
+```{r}
+# script to make a column graph for WGCNA modules
+
+setwd("~/Documents/UVM/ecological_genomics_23/transcriptomics/results")
+
+dat <- read.csv("~/Documents/UVM/ecological_genomics_23/transcriptomics/results/wgcna_mod_3.csv")
+
+library(ggplot2)
+library(dplyr)
+
+
+```
+
+```{r}
+
+ggplot(dat, aes(fill=condition, y=number_genes, x=color)
+
+```
