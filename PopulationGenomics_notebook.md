@@ -418,7 +418,7 @@ Class link: https://pespenilab.github.io/Ecological-Genomics/Fall2023/tutorials/
   -Ran a local PCA in tmux
   
 ------    
-<div id='id-section18'/>   
+<div id='id-section19'/>   
 
 
 ### Entry 19: 2023-11-07.
@@ -429,3 +429,58 @@ HW#2 workflow
 - Make into data frame (wgcna_md.csv in transcriptomics>results folder)
 - Make new script titled ahud_hw_barplot.R
 - Use ggplot to make grouped and stacked bar plots to visualize data
+
+------    
+<div id='id-section20'/>   
+
+
+### Entry 19: 2023-11-08.
+
+SV day 2: https://pespenilab.github.io/Ecological-Genomics/Fall2023/tutorials/Csenge_structural_variation.html
+
+- followed class tutorial lead by Csenge 
+- Workflow: 
+  1. chopping up genome
+  2. computing PCA
+  3. making a matrix to compare winsows
+  4. combine windows
+  5. pull out pca
+
+Class: 
+  1. Log onto server
+  2. Look at data in lostruct_results, file titles type_snp_size_1000_weights_none_jobid_526809
+  3. Vim run_lostruct.R -> script from developer
+    - vcf_windower: uses information to generate pc distance
+    - saves it as variables written into .csv
+  4. generates MDS and PCA
+
+
+------    
+<div id='id-section21'/>   
+
+
+### Entry 19: 2023-11-10.
+
+Homework #3 workflow 
+Class link: https://pespenilab.github.io/Ecological-Genomics/Fall2023/assignments/Homework3.html
+Assignment: analyze chromosome 7 for differences with significance threshold size
+
+1. Open terminal, enter server
+2. CD into myscripts...open summarize_run.Rmd
+3. tmux, cd mydata/str_data/lostruct_results/type_SNP_size_1000_weights_none_jobid_526809
+4. output new .csv called first_corner.csv
+5. Generate unique gene IDs in bash
+  Rscript -e 'templater::render_template("~/myscripts/summarize_run.Rmd",output="~/mydata/str_data/lostruct_results/type_snp_size_1000_weights_none_jobid_526809/run_summary_01.html",change.rootdir=TRUE)'
+
+  cut -d, -f1-3 first_corner_01.csv > first_corner_01_formatted.csv
+
+  sed -i 's/"//g' first_corner_01_formatted.csv
+
+  sed -i 's/,/\t/g' first_corner_01_formatted.csv
+
+  /netfiles/ecogen/structural_variation/bedtools2/bin/intersectBed -a first_corner_01_formatted.csv -b genome_annotation.gff -wa -wb > genes_first_corner_01.bed
+
+  sed -n "s/^.*gene=\(LOC[0-9]\+\).*$/\1/p" genes_first_corner_01.bed > gene_names_first_corner_01.txt
+
+  sort gene_names_first_corner_01.txt | uniq > uni_gene_names_first_corner_01.txt
+- repeat for all three corners at significance value=0.05 and 0.01
