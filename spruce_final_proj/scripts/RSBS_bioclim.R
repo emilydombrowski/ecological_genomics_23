@@ -53,10 +53,11 @@ fviz_eig(clim_PCA)
 # What is the climate PCA space our red spruce pops occupy?
 
 fviz_pca_biplot(clim_PCA, 
-                geom.ind="point", 
+                geom.ind="point",
                 col.ind = angsd_coords_clim$Pop,
+                habillage = as.factor(angsd_coords_clim$Pop),
                 title="Climate PCA (Bioclim)",
-                legend.title="Latitude")
+                legend.title="Population")
 
 # Which variables show the strongest correlation on the first 2 climate PC axes?
 

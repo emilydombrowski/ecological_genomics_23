@@ -484,3 +484,32 @@ Assignment: analyze chromosome 7 for differences with significance threshold siz
 
   sort gene_names_first_corner_01.txt | uniq > uni_gene_names_first_corner_01.txt
 - repeat for all three corners at significance value=0.05 and 0.01
+
+
+------    
+<div id='id-section21'/>   
+
+
+### Entry 20: 2023-11-27.
+
+Red spruce black spruce final project. Collaborators: Gwen Ellis, Nora Heaphy
+
+Objectives: 
+  - evaluate introgression in red spruce (RS) and black spruce (BS) populations
+  - identify parts of the genome where introgression are present
+  - evaluate whether or not introgression in these populations is adaptive
+  
+Workflow: 
+* All files are saved in ecological_genomics_23 > spruce_final_proj
+1. S. Keller reduced the new BS genome with probes for mapping. 
+2. Genotype liklihood files placed into a beagle file titled RSBS_poly.beagle.gz
+3. New vim script titled pcANGSD_RSBS_poly.sh
+    - Modified from pcANGSD_allRS_poly.sh to prep files for admixture analysis
+4. Input files from pcANGSD into R to generate admixture and PCA plots in R scripts
+    - File titled RSBS_pcANGSD.R in scripts folder
+    - PCA and admixture plots were evaluated at e=2 and 3, or k=2 and 4
+5. PCA comparing RS and BS populations and bioclim variables evaluated
+    - File titled RSBS_bioclim.R in scripts folder
+    - Combined RS and BS metadata required: found in a file titled RSBScombinedMetaData.csv in data folder
+    - Issues loading world clim data, similar to HW1. Alternate files uploaded. 
+    - Needed to adjust habillage in Factorextra plot to allow evaluation of populations vs. bioclim variables
