@@ -1,4 +1,4 @@
-# Population Genomics Lab Notebook
+# Ecological Genomics Lab Notebook
 
 ## Author: Emily Dombrowski
 ### Affiliation: University of Vermont, Dept. of Biology
@@ -33,6 +33,9 @@
 * [Entry 17: 2023-11-02](#id-section17)
 * [Entry 18: 2023-11-06](#id-section18)
 * [Entry 19: 2023-11-07](#id-section19)
+* [Entry 20: 2023-11-08](#id-section20)
+* [Entry 21: 2023-11-10](#id-section21)
+* [Entry 22: 2023-11-27](#id-section22)
 
 
 ------    
@@ -434,7 +437,7 @@ HW#2 workflow
 <div id='id-section20'/>   
 
 
-### Entry 19: 2023-11-08.
+### Entry 20: 2023-11-08.
 
 SV day 2: https://pespenilab.github.io/Ecological-Genomics/Fall2023/tutorials/Csenge_structural_variation.html
 
@@ -459,7 +462,7 @@ Class:
 <div id='id-section21'/>   
 
 
-### Entry 19: 2023-11-10.
+### Entry 21: 2023-11-10.
 
 Homework #3 workflow 
 Class link: https://pespenilab.github.io/Ecological-Genomics/Fall2023/assignments/Homework3.html
@@ -487,10 +490,10 @@ Assignment: analyze chromosome 7 for differences with significance threshold siz
 
 
 ------    
-<div id='id-section21'/>   
+<div id='id-section22'/>   
 
 
-### Entry 20: 2023-11-27.
+### Entry 22: 2023-11-27.
 
 Red spruce black spruce final project. Collaborators: Gwen Ellis, Nora Heaphy
 
@@ -501,7 +504,10 @@ Objectives:
   
 Workflow: 
 * All files are saved in ecological_genomics_23 > spruce_final_proj
-1. S. Keller reduced the new BS genome with probes for mapping. 
+1. S. Keller reduced the new BS genome with probes for mapping.
+    - Located on ecogen server: /netfiles/ecogen/PopulationGenomics/
+    - Ref genome is in ref_genome folder
+    - fastq files are in /netfiles/ecogen/PopulationGenomics/fastq/black_spruce
 2. Genotype liklihood files placed into a beagle file titled RSBS_poly.beagle.gz
 3. New vim script titled pcANGSD_RSBS_poly.sh
     - Modified from pcANGSD_allRS_poly.sh to prep files for admixture analysis

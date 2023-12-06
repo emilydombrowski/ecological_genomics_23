@@ -2,6 +2,8 @@
 
 # script for BIOCLIM data
 
+
+## 1. Load in libraries
 library(raster) # useful for spatial data
 library(FactoMineR) # useful for principle components in R
 library(factoextra)
@@ -10,8 +12,11 @@ library(corrplot) # useful for
 # contextualized on https://www.worldclim.org/data/worldclim21.html
 # 19 climactic variables useful for summarizing the climate (mainly for terrestrial info)
 
+
+#2. Set wd
 setwd("~/Documents/UVM/ecological_genomics_23/spruce_final_proj/results")
 
+#3. Load in files
 bioclim_list <- list.files("~/Documents/UVM/ecological_genomics_23/PopGenomics/results/wc10/", pattern=".bil",full.names=T)
 
 bio <- raster::stack(bioclim_list)
@@ -23,10 +28,12 @@ coords <- read.csv("~/Documents/UVM/ecological_genomics_23/spruce_final_proj/dat
 # The chunk below refers to your bamlist file that you transferred during last week's PCA/admixture analysis.  
 # It should be the same one you want to use here -- if your sample list for analysis changes in the future, you'll need a different bamlist!
 
-names <- read.table("RSBS_bam.list")
-names <- unlist(strsplit(basename(as.character(names[,1])), split = ".sorted.rmdup.bam"))
-split = strsplit(names, "_")
-pops <- data.frame(names[1:113], do.call(rbind, split[1:113]))
+
+#3. Read table
+names <- read.table("RSBS_bam.list") # reads in files
+names <- unlist(strsplit(basename(as.character(names[,1])), split = ".sorted.rmdup.bam")) # extracts pop numbers
+split = strsplit(names, "_") # split names by removing _
+pops <- data.frame(names[1:113], do.call(rbind, split[1:113])) # made df combining factors from others
 names(pops) = c("Ind", "Pop", "Row", "Col")
 # using BAM lists to get treenames from PCA; cleaned up version of bam list
 # splits names by underscores
