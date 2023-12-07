@@ -12,7 +12,7 @@ library(ggpubr) # plotting
 library(tidyverse) # data cleaning
 
 #### Load in data frames
-w <- npyLoad("RSBS_poly.weights.npy")
+w <- npyLoad("RSBS_poly.weights_v3.npy")
 weight <- as.data.frame(w)
 
 names(weight) = c("w_PC1","w_PC2") # how do I reassign column names?
@@ -26,7 +26,6 @@ dim(p) # [1] 680688      8
 p_filtered = p[which(p$kept_sites==1),]
 dim(p_filtered) # [1] 507966      8
 
-
 s<-npyLoad("RSBS_poly.selection.npy")
 
 # convert test statistic to p-value
@@ -39,8 +38,8 @@ dim(pc_weights)
 head(pc_weights)
 
 ## make 'manhattan' plot
-plot(pc_weights$w_PC1,
-     col=pc_weights$chromo,
+plot(weight$w_PC1,
+     col=p_filtered$chromo,
      xlab="Position",
      ylab="PC1 Loading",
      main="Principal component loading along PC1: pcANGSD e=2 (K3)",
@@ -54,7 +53,10 @@ plot(pc_weights$w_PC1[2.535e05:2.545e05],
      cex=0.3)
 
 plot(pc_weights$knownEM[253500:254500])
-     
+
+plot(x=pc_weights$w_PC1,
+     y=pc_weights$knownEM,
+     col=p_filtered$chromo)   
      
 plot(weight[253950:254050,1])
 
@@ -65,4 +67,10 @@ plot(x=pc_weights$w_PC1[253500:254500], y=pc_weights$knownEM[253500:254500])
 plot(x=p_filtered$chromo, y=weight$w_PC1)
 
 cutoff=0.0005   # equals a 1 in 5,000 probability
-outlier_contigs_wPC1 <- pc_weights[which(pc_weights$p_PC1<cutoff),c("chromo","position", "major", "minor", "ref", "anc", "w_PC1")]
+outlier_contigs_wPC1 <- pc_weights[which(pval$p_PC1<cutoff),c("chromo","position", "major", "minor", "ref", "anc", "w_PC1")]
+
+plot(x = outlier_contigs_wPC1$w_PC1, y = outlier_contigs_wPC1$position,
+     col = outlier_contigs_wPC1$ref, cex=1,
+     main = "PC Loadings of 28 Outlier Loci",
+     xlab = "PC Loadings",
+     ylab = "Position along Chromosome")
