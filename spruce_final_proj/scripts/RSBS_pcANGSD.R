@@ -1,13 +1,11 @@
 # pcANGSD results for red and black spruce introgression
 
-setwd("~/Documents/UVM/ecological_genomics_23/spruce_final_proj/results")
-
 library(ggplot2) # plotting
 library(ggpubr) # plotting
 
 ## First, let's work on the genetic PCA:
 
-COV <- as.matrix(read.table("RSBS_poly_k4.cov")) # read in the genetic covariance matrix
+COV <- as.matrix(read.table("BS_mapped_poly_e2.cov")) # read in the genetic covariance matrix
 
 PCA <- eigen(COV) # extract the principal components from the COV matrix
 
@@ -25,7 +23,7 @@ barplot(var,
 
 ## Bring in the bam.list file and extract the sample info:
 
-names <- read.table("RSBS_bam_k4.list")
+names <- read.table("BS_mapped_bam.list")
 names <- unlist(strsplit(basename(as.character(names[,1])), split = ".sorted.rmdup.bam"))
 split = strsplit(names, "_")
 pops <- data.frame(names[1:113], do.call(rbind, split[1:113]))
@@ -64,7 +62,7 @@ ggscatter(data, x = "V1", y = "V2",
 
 # import the ancestry scores (these are the .Q files)
 
-q <- read.table("RSBS_poly.admix.4.Q", sep=" ", header=F)
+q <- read.table("BS_mapped_poly.admix.3.Q", sep=" ", header=F)
 
 dim(q)
 

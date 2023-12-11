@@ -61,3 +61,4 @@ pval_PC1 <- p_filtered[which(pval_PC1<cutoff)]
 pc_pval <- cbind(p_filtered, pval)
 # merges df
 outlier_contigs_PC1_pval <- pc_pval[which(pval$p_PC1<cutoff),c("chromo","position", "major", "minor", "ref", "anc", "p_PC1")]
+write_csv(outlier_contigs_PC1_pval, file="outlier_contigs_PC1_RS")
