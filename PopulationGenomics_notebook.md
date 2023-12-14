@@ -519,3 +519,59 @@ Workflow:
     - Combined RS and BS metadata required: found in a file titled RSBScombinedMetaData.csv in data folder
     - Issues loading world clim data, similar to HW1. Alternate files uploaded. 
     - Needed to adjust habillage in Factorextra plot to allow evaluation of populations vs. bioclim variables
+    
+
+------    
+<div id='id-section23'/>   
+
+
+### Entry 23: 2023-12-06.
+
+Red spruce black spruce final project. Collaborators: Gwen Ellis, Nora Heaphy
+
+1. Manipulated scripts to analyze PC loadings accross genome
+  - found in script titled outlier_pca.R
+  - abrupt gap in genome where figures don't allign with ecpectations
+  - trouble shooting including indexing the graph to see where problem is occurring
+2. Talked to Steve about adjustments, etc. 
+
+
+------    
+<div id='id-section24'/>   
+
+
+### Entry 24: 2023-12-08.
+
+1. Re-ran NS and BS beagle files (tutorial 6)
+  - adjusted mapping scripts to reproduce genotype liklihood beagle (.gz) files, titled mapping_RS.sh and mapping_BS.sh in ~/myscripts
+  - new beagle files created. Adjusted pcANGSD scripts and re ran them. New scripts titled pcANGSD_BS_mapped.sh. 
+  - Re-ran selection scans to produce outlier loci. (Tutorial 7) New scripts titled pcANGSD_selection_BS.sh and pcANGSD_selection_NS.sh.
+2. New bam lists, .cov, .npy, etc. files transferred to local machine using filezilla
+2. Re-ran relevant analyses in R, evaluated admixture and PCA plots using BS reference to compare to NS reference files. 
+  - Overwhelmingly similar NS/BS plots
+  - even with newly produced files, ran into issues with "manhattan plot" across the genome...talked further to Steve, who hypothesizes "the switch-over between the 2 different distributions of loadings occurs at approx the halfway point. In other words, it looks like there are the same numbers of loci in each distribution, which is not at all what you would expect unless perhaps it reflects each locus getting 2 values -- one from each distirbution."
+  - I abandoned the PC loadings accross the genome plot!! Too much hassle
+  
+
+------    
+<div id='id-section25'/>   
+
+
+### Entry 24: 2023-12-10.
+
+Last coding session for Spruced up: Identifying potentially adaptive black spruce introgression in red spruce populations presentaton and project.
+
+Collaborators: G. Ellis, N. Heaphy
+Final presentation 12/11/23, available via google slides
+Final paper 12/14/23, available via google docs
+
+1. Plot PC loadings vs. allele frequency in outlier_pca.R
+2. Filter so that BS samples are colored black and RS samples are colored red
+3. Output relevant outlier contigs
+4. use following commands in bash to get outlier genes: 
+ - ANNOT="/netfiles/ecogen/PopulationGenomics/ref_genome/annotation/Pabies1.0-all-cds.gff3.gz"
+ - OUTLIERS=/netfiles/ecogen/groupProjects/sprucedUp/RS_results/RS_PC1_outlier_contigs.txt
+ - zcat ${ANNOT} | grep -f ${OUTLIERS} | grep "gene" | uniq | cut -f9 | sed "s/ID=//g"
+5. Put lists of significant genes into plantgenie.org to obtain enrichment, GO, and protein family identification
+
+Last coding bit for this class! Very happy with the outputs and growth :)
